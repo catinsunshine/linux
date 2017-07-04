@@ -1,0 +1,2 @@
+deb http://ftp.cn.debian.org/debian/ sid main non-free contrib
+deb-src http://ftp.cn.debian.org/debian/ sid main non-free contrib
