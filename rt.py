@@ -19,7 +19,7 @@ print('*'*40)
 # Print when to retired
 print()
 today=datetime.datetime.now()
-retired=datetime.datetime(1982+60,2,17)
+retired=datetime.datetime(1981+60,1,24)
 rest=(retired-today).days
 years=1982+60-datetime.datetime.now().year
 print('You will retire after ', rest, 'days, less than ', years, 'years.')
