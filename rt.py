@@ -1,6 +1,20 @@
 import datetime
+import os
+import send2trash
 
-print()
+print('*'*40)
+
+os.chdir('/home/peter/Pictures')
+print('Skip to %s ...' %os.getcwd())
+
+if not os.listdir()==[]:
+    for i in os.listdir():
+        send2trash.send2trash(i)
+        print('%s deleted' %i)
+else:
+    print('The folder is empty.')
+        
+print('*'*40)
 
 # Print when to retired
 print()
