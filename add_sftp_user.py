@@ -3,7 +3,7 @@ import os
 
 userName = input('Who will be added? ')
 
-with open('/home/peter/Downloads/adduser', 'w') as f:
+with open('./adduser', 'w') as f:
     f.write('#! /bin/bash')
     f.write('\nsudo adduser %s' % (userName))
     f.write('\nsudo usermod -G sftp-users -s /bin/false %s' % (userName))
@@ -23,7 +23,7 @@ os.chmod('./adduser', 0o775)
 print('chmod 775 to file: adduser')
 print('***'*30)
 
-with open('/home/peter/Downloads/adduser') as f:
+with open('./adduser') as f:
     print('adduser shows:')
     contents=f.read()
     print(contents)
@@ -44,3 +44,9 @@ with open('/etc/ssh/sshd_config') as cg:
     print('sshd_config shows:')
     contents=cg.read()
     print(contents)
+
+print('''
+running commands:
+sudo python3 add_sftp_user.py
+sudo ./adduser
+''')
